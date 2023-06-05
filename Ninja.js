@@ -21,6 +21,7 @@ class Ninja {
         console.log(`${this.name} your health increased by 10.`);
     }
 }
+
 const ninja1 = new Ninja("Taleen");
 ninja1.sayName();
 ninja1.showStats();
