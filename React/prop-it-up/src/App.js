@@ -7,10 +7,10 @@ function App() {
   return (
     <div className="App">
       <div className="App">
-      <PersonCard firstName="Jane" lastName="Doe" age="45" hairColor="Black"/>
-      <PersonCard firstName="John" lastName="Smith" age="88" hairColor="Brown"/>
-      <PersonCard firstName="Millard" larstName="Fillmore" age="50" hairColor="Brown"/>
-      <PersonCard firstName="Maria" lastName="Smith" age="28" hairColor="black"/>
+      <PersonCard firstName={"Taleen"} lastName={"Khoury"} age={"23"} color={"Brown"}/>
+      <PersonCard firstName={"John"} lastName={"Smith"} age={"45"} color={"Black"}/>
+      <PersonCard firstName={"Millard"} lastName={"Fillmore"} age={"88"} color={"Brown"}/>
+      <PersonCard firstName={"Maria"} lastName={"Smith"} age={"20"} color={"Black"}/>
     </div>
     </div>
   );
