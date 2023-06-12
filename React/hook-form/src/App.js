@@ -11,6 +11,7 @@ function App() {
   
   return (
     <div className="App">
+      {/* <inputHook label ="First Name"></inputHook> */}
       <p>First Name:<input type="text" onChange={e=>setFirstName(e.target.value)}/></p>
       <p>Last Name:<input type="text" onChange={e=>setLastName(e.target.value)}/></p>
       <p>Email:<input type="text" onChange={e=>setEmail(e.target.value)}/></p>
