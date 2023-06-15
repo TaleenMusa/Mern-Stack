@@ -7,7 +7,7 @@ function App() {
   const [colors, setColors] = useState([]);
 
   const addColor = (color) => {
-    setColors([{ backgroundColor: color }]);
+    setColors([...colors,{ backgroundColor: color }]);
   }
 
   return (
