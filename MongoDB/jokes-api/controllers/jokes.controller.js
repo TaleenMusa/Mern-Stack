@@ -8,8 +8,8 @@ module.exports.findAllJokes = (req, res) => {
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
         });
-}
- 
+    }
+
 module.exports.findOneSingleJoke = (req, res) => {
     Joke.findOne({ _id: req.params.id })
         .then(oneSingleJoke => {
@@ -22,7 +22,7 @@ module.exports.findOneSingleJoke = (req, res) => {
 module.exports.createNewJoke = (req, res) => {
     Joke.create(req.body)
         .then(newlyCreatedJoke => {
-            res.json({ Joke: newlyCreatedJoke })
+            res.json({ jokes: newlyCreatedJoke })
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
@@ -48,4 +48,6 @@ module.exports.deleteAnExistingJoke = (req, res) => {
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
-        });}
+        });
+
+    }
