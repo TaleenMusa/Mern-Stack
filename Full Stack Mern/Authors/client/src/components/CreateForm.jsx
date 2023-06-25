@@ -9,11 +9,12 @@ const CreateForm = (props) => {
     e.preventDefault();
     if (name.length === 0) {
       setError('Name is required');
-    } else if (name.length < 5) {
-      setError('Name must be more than 5 characters');
+    } else if (name.length < 3) {
+      setError('Name must be more than 3 characters');
     } else {
       setError('');
       props.myFun(name);
+      setName('');
     }
   };
 

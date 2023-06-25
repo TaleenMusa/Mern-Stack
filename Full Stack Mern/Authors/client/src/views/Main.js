@@ -20,7 +20,7 @@ const Main = () => {
     axios.delete("http://localhost:8000/api/authors/" + id)
       .then((res) => {
         console.log(res);
-        // Update the state by removing the deleted author
+      
         setAllAuthors(allAuthors.filter(author => author._id !== id));
       })
       .catch((err) => console.log(err));

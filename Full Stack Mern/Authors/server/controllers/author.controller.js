@@ -19,14 +19,18 @@ module.exports.findOneSingleAuthor = (req, res) => {
             res.status(400).json(err)
         });}
  
-module.exports.createNewAuthors = (req, res) => {
-    Author.create(req.body)
-        .then(newlyCreatedAuthor => {
-            res.json({ author: newlyCreatedAuthor })
-        })
-        .catch((err) => {
-            res.status(400).json(err)
-        });}
+        module.exports.createNewAuthors = (req, res) => {
+            Author.create(req.body)
+              .then(() => {
+                return Author.find().sort({ name: 1 }); // Sort the authors alphabetically
+              })
+              .then(allAuthors => {
+                res.json({ authors: allAuthors });
+              })
+              .catch(err => {
+                res.status(400).json(err);
+              });
+          };
  
 module.exports.updateExistingAuthor= (req, res) => {
     Author.findOneAndUpdate(

@@ -15,9 +15,8 @@ const Home = (props) => {
   <table  className="table">
     <thead>
       <tr>
-        <th >Name</th>
-        <th >Delete</th>
-        <th >Edit</th>
+        <th >Author</th>
+        <th >Actions Available</th>
       </tr>
     </thead>
     <tbody>
